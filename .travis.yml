@@ -1,0 +1,17 @@
+sudo: false
+language: node_js
+node_js:
+  - "0.10"
+  - "0.12"
+  - "4.0"
+  - "4.1"
+  - "4.2"
+  - "5"
+before_install:
+  - npm install -g npm
+  - npm install -g cordova
+  - npm install -g grunt-cli
+before_script:
+  - npm install
+script:
+  - grunt precommit
